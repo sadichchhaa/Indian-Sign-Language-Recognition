@@ -16,11 +16,11 @@ def rr_main():
 
     # Function to display images
 
-    def display(img,title="Original"):
-        plt.imshow(img,cmap='gray'),plt.title(title)
+    def display(img, title="Original"):
+        plt.imshow(img, cmap='gray'), plt.title(title)
         plt.axis('off')
         plt.show(block=False)
-        plt.pause(2)
+        plt.pause(1)
         plt.close
 
     path=('Reverse sign images//')
@@ -30,7 +30,7 @@ def rr_main():
         #top=tk.Tk()
         messagebox.showinfo('Info','Speak Now')
         #print("Speak Now")
-        audio=voice.listen(source)
+        audio = voice.listen(source)
         try:
             messagebox.showinfo('Info', 'Recognizing...')
             #print("Recognizing....")
@@ -46,7 +46,7 @@ def rr_main():
         for l in text:
             if l is not ' ':
                 img=imageio.imread(path+str(l)+'.jpg')
-                display(img,l)
+                display(img, l)
     except:
         messagebox.showerror("error","There was an error reading the input")
 

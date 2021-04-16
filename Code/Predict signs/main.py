@@ -14,13 +14,13 @@ from datetime import date
 from tkinter import messagebox
 import sys
 import random
-from creating_dataset import cd_main
 from Prediction import pred_main
 from Reverse_Recognition import rr_main
+from creating_dataset import cd_main
 
-#global variables
-bg=None
-selection=1
+# global variables
+bg = None
+selection = 1
 
 
 # =====================Create Database=============================================
@@ -78,6 +78,7 @@ def loggin():
                 for frame in (f1, f2, f3, f4):
                     frame.place(x=0, y=0, width=400, height=400)
                 window2.geometry("400x400+420+170")
+                window2.title("Menu")
                 window2.resizable(False, False)
                 label3 = Label(f1, text="User Panel", font=("arial", 20, "bold"), bg="grey16", fg="white",
                                relief=SUNKEN)
@@ -181,43 +182,43 @@ def loggin():
                 # =========================Main Buttons=========================================
 
                 btn2w2 = ttk.Button(f1, text="Predict Sign", command=pred_main)
-                btn2w2.place(x=255, y=115, width=150, height=30)
+                btn2w2.place(x=127, y=115, width=150, height=30)
 
                 btn3w2 = ttk.Button(f1, text="Translate speech", command=rr_main)
-                btn3w2.place(x=255, y=170, width=150, height=30)
+                btn3w2.place(x=127, y=170, width=150, height=30)
 
                 btn6w2 = ttk.Button(f1, text="Create Signs", command=cd_main)
-                btn6w2.place(x=255, y=225, width=150, height=30)
+                btn6w2.place(x=127, y=225, width=150, height=30)
 
                 # =========================Developers Page=========================================
 
-                label10 = Label(f4, text="", font=("arial", 20, "bold"), bg="grey16", fg="white")
-                label10.pack(side=TOP, fill=X)
-                label11 = Label(f4, text="     Indian Sign Language Recognition System", font=("arial", 10, "bold"), bg="grey16",
-                                fg="white")
-                label11.pack(side=BOTTOM, fill=X)
+                # label10 = Label(f4, text="", font=("arial", 20, "bold"), bg="grey16", fg="white")
+                # label10.pack(side=TOP, fill=X)
+                # label11 = Label(f4, text="     Indian Sign Language Recognition System", font=("arial", 10, "bold"), bg="grey16",
+                #                 fg="white")
+                # label11.pack(side=BOTTOM, fill=X)
+                #
+                # label10 = Label(f4, text=" Information Will be Added Soon!", font=("arial", 12, "bold"))
+                # label10.place(x=75, y=150)
 
-                label10 = Label(f4, text=" Information Will be Added Soon!", font=("arial", 12, "bold"))
-                label10.place(x=75, y=150)
+                # def swap4(frame):
+                #     frame.tkraise()
+                #     statusbar['text'] = '                            Indian Sign Language Recognition System'
 
-                def swap4(frame):
-                    frame.tkraise()
-                    statusbar['text'] = '                            Indian Sign Language Recognition System'
+                # btn4w2 = ttk.Button(f4, text="Back	", command=lambda: swap4(f1))
+                # btn4w2.place(x=3, y=40, width=50, height=30)
 
-                btn4w2 = ttk.Button(f4, text="Back	", command=lambda: swap4(f1))
-                btn4w2.place(x=3, y=40, width=50, height=30)
+                # def swap3(frame):
+                #     frame.tkraise()
 
-                def swap3(frame):
-                    frame.tkraise()
-
-                btn9w2 = ttk.Button(f1, text="Developers", command=lambda: swap3(f4))
-                btn9w2.place(x=255, y=280, width=150, height=30)
+                # btn9w2 = ttk.Button(f1, text="Developers", command=lambda: swap3(f4))
+                # btn9w2.place(x=255, y=280, width=150, height=30)
 
                 def quit():
                     window2.destroy()
 
                 btn9w2 = ttk.Button(f1, text="Exit", command=quit)
-                btn9w2.place(x=255, y=335, width=150, height=30)
+                btn9w2.place(x=127, y=280, width=150, height=30)
 
                 f1.tkraise()
                 window2.mainloop()
@@ -249,30 +250,30 @@ nb.pack(expand=True, fill="both")
 # =============Login tab=========================================
 
 name2_label = Label(tab1, text="Name", font=("arial", 10, "bold"))
-name2_label.place(x=10, y=10)
+name2_label.place(x=90, y=10)
 name2_entry = StringVar()
 name2_entry = ttk.Entry(tab1, textvariable=name2_entry)
-name2_entry.place(x=90, y=10)
+name2_entry.place(x=165, y=10)
 name2_entry.focus()
 
 pass2_label = Label(tab1, text="Password", font=("arial", 10, "bold"))
-pass2_label.place(x=10, y=40)
+pass2_label.place(x=90, y=40)
 pass2_entry = StringVar()
 pass2_entry = ttk.Entry(tab1, textvariable=pass2_entry, show="*")
-pass2_entry.place(x=90, y=40)
+pass2_entry.place(x=165, y=40)
 
 # =====================Signup Tab===============================
 name_label = Label(tab2, text="Name", font=("arial", 10, "bold"))
-name_label.place(x=10, y=10)
+name_label.place(x=90, y=10)
 name_entry = StringVar()
 name_entry = ttk.Entry(tab2, textvariable=name_entry)
-name_entry.place(x=90, y=10)
+name_entry.place(x=165, y=10)
 name_entry.focus()
 pass_label = Label(tab2, text="Password", font=("arial", 10, "bold"))
-pass_label.place(x=10, y=40)
+pass_label.place(x=90, y=40)
 pass_entry = StringVar()
 pass_entry = ttk.Entry(tab2, textvariable=pass_entry, show="*")
-pass_entry.place(x=90, y=40)
+pass_entry.place(x=165, y=40)
 
 
 def clear():
@@ -282,14 +283,14 @@ def clear():
 # ===============User Buttons==============================================
 
 btn1 = ttk.Button(tab2, text="Add User", command=saveadmin)
-btn1.place(x=50, y=80)
+btn1.place(x=110, y=80)
 btn2 = ttk.Button(tab2, text="Clear", command=clear)
-btn2.place(x=140, y=80)
+btn2.place(x=195, y=80)
 
 # ================Login Button Main======================================
 
 btn3 = ttk.Button(tab1, text="Login", width=20, command=loggin)
-btn3.place(x=87, y=80)
+btn3.place(x=130, y=80)
 
 window.geometry("400x400+420+170")
 window.resizable(False, False)
