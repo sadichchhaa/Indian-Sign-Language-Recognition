@@ -1,0 +1,7 @@
+Found existing installation: Pillow 8.0.1
+Uninstalling Pillow-8.0.1:
+  Would remove:
+    d:\anaconda3\lib\site-packages\pil\*
+    d:\anaconda3\lib\site-packages\pillow-8.0.1.dist-info\*
+Proceed (y/n)? Your response ('') was not one of the expected responses: y, n
+Proceed (y/n)?   Successfully uninstalled Pillow-8.0.1
